@@ -9,6 +9,7 @@
 const NATS = require('nats') // Require the NATS module
 const nc = NATS.connect({url: "nats://demo.nats.io:4222"}); // Connect to the NATS demo server
 
+// Publish a message every second
 setInterval(()=>{
     console.log("Send message: All is well")
     nc.publish('messages', "All is Well");
